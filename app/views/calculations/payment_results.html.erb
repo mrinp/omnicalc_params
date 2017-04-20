@@ -1,0 +1,10 @@
+<h1> Payment Results </h1>
+
+<h2> APR </h2> <h3> <%= @apr %> </h3>
+<h2> Number of Years </h2> <h3> <%= @years %> </h3>
+<h2> Principal </h2> <h3> <%= @principal %> </h3>
+<h2> Payment </h2> <h3> $<%= @monthly_payment %> </h3>
+
+<form action = "/payment/new">
+  <button> Return to entry form </button>
+</form>
