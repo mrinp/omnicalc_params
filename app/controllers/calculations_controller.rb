@@ -58,7 +58,7 @@ class CalculationsController <ApplicationController
   def payment
     @years = params["years"].to_f
     @principal = params["principal"].to_f
-    @calculated_apr = ((params["entered_apr"].to_f)/100).round(2)
+    @apr = ((params["apr"].to_f)/100).round(2)
     @monthly_payment = ( ((@apr/100/12)*@principal) /( 1- ((1+(@apr/100/12)) ** (@years*-12)) )).round(2)
 
     render ("calculations/payment_results.html.erb")
